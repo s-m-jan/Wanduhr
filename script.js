@@ -12,6 +12,6 @@ setInterval(() => {
     minArrow.style.transform = `rotate(${minDeg}deg)`
     let hourArrow = document.querySelector(".arrows .hour");
     let hour =  date.getHours() % 12;
-    let hourDeg = hour * 30;
+    let hourDeg = (hour * 30) + (30 - 30 /date.getMinutes());;
     hourArrow.style.transform = `rotate(${hourDeg}deg)`
 }, 1000);
